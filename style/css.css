@@ -25,7 +25,7 @@ body{
     align-items: center;
     justify-content: space-between;
     background: #E91E63;
-    height: 7rem;
+    height: 6rem;
     padding:0 50px;
 }
 .calender .monthData i{
@@ -65,14 +65,15 @@ body{
     background-color: rgb(41, 41, 41);
     display: flex;
     flex-wrap:wrap;
+    justify-content: center;
     padding: 0.5rem;
 }
 .calender .days span{
     width: calc(29rem/7);
-    height: calc(29rem/7);
+    height: calc(28rem/7);
     font-size: 1.2rem;
     text-align: center;
-    line-height: calc(29rem/7);
+    line-height: calc(28rem/7);
     cursor: pointer;
     transition: all .2s ease-in-out;
 }  
@@ -95,4 +96,72 @@ body{
 @font-face{
     font-family: "newFont";
     src: url("Raleway-Regular.ttf");
+}
+
+
+/* Add Media */
+@media(min-width:300px) and (max-width:499px){
+    .calender{width: 15rem;}
+    .calender .monthData{
+        height: 3rem;
+        padding:0 25px;
+    }
+    .calender .monthData i{
+        font-size: 1.1rem;
+    }
+    .calender .monthData div span:first-of-type{
+        font-size: .9rem;
+        margin-bottom: .3rem;
+    }
+    .calender .monthData div span:last-of-type{
+        font-size: .5rem;
+    }
+    .calender .weekDays{
+        padding:0.75rem 0.5rem;
+        font-size: .75rem;
+    }
+    
+    .calender .weekDays span{width: calc(14rem/7);}
+    
+    .calender .days{padding: 0.5rem;}
+
+    .calender .days span{
+        width: calc(14rem/7);
+        height: calc(14rem/7);
+        font-size: .75rem;
+        line-height: calc(14rem/7);
+    }  
+}
+
+
+@media(min-width:500px) and (max-width:767px){
+    .calender{width: 24rem;}
+    .calender .monthData{
+        height: 4rem;
+    }
+    .calender .monthData i{
+        font-size: 1.5rem;
+    }
+    .calender .monthData div span:first-of-type{
+        font-size: 1.3rem;
+        margin-bottom: .5rem;
+    }
+    .calender .monthData div span:last-of-type{
+        font-size: .8rem;
+    }
+    .calender .weekDays{
+        padding:0.75rem 0.5rem;
+        font-size: 1rem;
+    }
+    
+    .calender .weekDays span{width: calc(23rem/7);}
+    
+    .calender .days{padding: 0.5rem;}
+
+    .calender .days span{
+        width: calc(23rem/7);
+        height: calc(23rem/7);
+        font-size: 1rem;
+        line-height: calc(23rem/7);
+    }  
 }
